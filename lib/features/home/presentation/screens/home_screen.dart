@@ -19,7 +19,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   ScrollController? _scrollController;
   bool isLoading = false;
-  int pageNum = 1;
 
   @override
   void initState() {
@@ -27,6 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
     _scrollController = ScrollController();
     // HomeCubit.get(context)!
     //     .getAllUsers(pageNumber: pageNum); // Fetch initial data
+    pageNum = 1;
+    print('bavlyyyyyyyyyyyyyyyyyyy $pageNum');
+
     HomeCubit.get(context)!.getSearchedUsers(1);
     _scrollController!.addListener(_scrollListener);
   }

@@ -30,3 +30,5 @@ const profilePic = 'http://16.171.141.127/uploads/';
 
 String email = Uri.encodeComponent("mansa.eg@gmail.com");
 String subject = Uri.encodeComponent("Hello in Mansa ");
+
+int pageNum = 1;

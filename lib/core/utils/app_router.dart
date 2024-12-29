@@ -45,7 +45,9 @@ abstract class AppRouter {
           builder: (context, state) => ProfileScreen(),
           onExit: (context, state) async {
             // Call the async function
-            await HomeCubit.get(context)!.getSearchedUsers(1);
+            await HomeCubit.get(context)!.getSearchedUsers(1).then((value) {
+              pageNum = 1;
+            });
 
             // Always allow navigation
             return true;
