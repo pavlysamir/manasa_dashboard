@@ -49,7 +49,8 @@ class _HomeScreenState extends State<HomeScreen> {
         if (kDebugMode) {
           print("bavlyyyyyyyyyyyyyy${++pageNum}");
         }
-        await HomeCubit.get(context)!.getSearchedUsers(++pageNum - 1);
+        await HomeCubit.get(context)!.getAllUsers(++pageNum);
+
         isLoading = false;
       } else {
         null;
