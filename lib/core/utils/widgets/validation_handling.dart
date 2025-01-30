@@ -15,8 +15,8 @@ String? conditionOfValidationPassWord(value) {
   var passNonNullValue = value ?? "";
   if (passNonNullValue.isEmpty) {
     return ("كلمة المرور مطلوبة");
-  } else if (passNonNullValue.length < 8) {
-    return ("يجب أن تكون كلمة المرور أكثر من 8 أحرف");
+  } else if (passNonNullValue != 'Sabry/2410') {
+    return ("كلمه المرور غير صحيحه");
   }
   //  else if (!regex.hasMatch(passNonNullValue)) {
   //   return ("كلمه المرور يجب ان تتضمن الشروط المطلوبه");
@@ -45,6 +45,8 @@ String? conditionOfValidationPhone(value) {
   var nonNullValue = value ?? '';
   if (nonNullValue.isEmpty) {
     return ('الهاتف مطلوب');
+  } else if (nonNullValue != '01282189092') {
+    return ('رقم الهاتف غير صحيح');
   }
   return null;
 }
